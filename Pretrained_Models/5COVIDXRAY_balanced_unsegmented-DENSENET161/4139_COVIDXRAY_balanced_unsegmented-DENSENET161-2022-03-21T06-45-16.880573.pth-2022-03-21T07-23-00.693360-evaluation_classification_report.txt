@@ -1,0 +1,31 @@
+              precision    recall  f1-score   support
+
+    COVID-19     0.9938    0.9580    0.9756       500
+      Normal     0.9302    0.9860    0.9573       500
+   Pneumonia     0.9857    0.9620    0.9737       500
+
+    accuracy                         0.9687      1500
+   macro avg     0.9699    0.9687    0.9688      1500
+weighted avg     0.9699    0.9687    0.9688      1500
+
+
+TorchMetrics Accuracy: 0.968666672706604
+TorchMetrics AUC: 200.0
+TorchMetrics ROC AUC: 0.997900664806366
+TorchMetrics Average Precision: 0.48412856459617615
+TorchMetrics Cohen Kappa: 0.953000009059906
+TorchMetrics Confusion Matrix: tensor([[479,  20,   1],
+        [  1, 493,   6],
+        [  2,  17, 481]])
+TorchMetrics Dice Score: 0.9654828310012817
+TorchMetrics F1: 0.9686666131019592
+TorchMetrics Fbeta: 0.968666672706604
+TorchMetrics Hamming Distance: 0.020888864994049072
+TorchMetrics Hinge Loss: 0.3499999940395355
+TorchMetrics Jaccard Index: 0.9396891593933105
+TorchMetrics Matthews Correlation Coefficient: 0.9534348249435425
+TorchMetrics Precision: 0.968666672706604
+TorchMetrics Specificity: 0.984333336353302
+TorchMetrics Recall: 0.968666672706604
+TorchMetrics Stat Scores: tensor([1453,   47, 2953,   47, 1500])
+Statsmodels 95% Confidence Interval (lower, upper): (95.99, 97.75)

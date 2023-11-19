@@ -1,0 +1,12 @@
+.DS_Store
+Datasets/*
+!Datasets/CLCOVIDXRAY-balanced-unsegmented_live_train
+tb_data
+results/
+log.txt
+*.pth
+.env
+venv
+__pycache__/
+covid-19-pneumocheck-firebase-adminsdk-4hjhg-65d0e6f2d1.json
+covid-xray-test-images/

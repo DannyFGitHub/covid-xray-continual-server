@@ -1,0 +1,11 @@
+ROCAUC,Precision,Specificity,Recall,F1,Accuracy95%CI,ClassificationReport
+0.9979,0.9687,0.9843,0.9687,0.9687,"96.87(95.99, 97.75)","              precision    recall  f1-score   support
+
+    COVID-19     0.9938    0.9580    0.9756       500
+      Normal     0.9302    0.9860    0.9573       500
+   Pneumonia     0.9857    0.9620    0.9737       500
+
+    accuracy                         0.9687      1500
+   macro avg     0.9699    0.9687    0.9688      1500
+weighted avg     0.9699    0.9687    0.9688      1500
+"

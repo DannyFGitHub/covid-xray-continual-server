@@ -1,0 +1,20 @@
+avalanche-lib==0.2.1
+matplotlib==3.5.0
+numpy==1.23.3
+# pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
+#torch==1.10.1+cu113
+#torchvision==0.11.2+cu113
+#torchaudio==0.10.1+cu113
+tqdm==4.62.3
+typing-extensions
+psutil
+tensorboard
+scikit-learn
+pytorchcv
+quadprog
+gdown
+pycocotools
+seaborn
+torchviz
+python-dotenv
+firebase-admin
