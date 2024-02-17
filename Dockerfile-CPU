@@ -1,0 +1,47 @@
+FROM ubuntu:22.04
+
+ENV PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+
+# set working directory
+WORKDIR /app
+
+# install pip
+RUN apt-get update && apt-get install -y python3-pip
+
+# install git
+RUN apt-get install -y git python3-setuptools curl ffmpeg libsm6 libxext6
+
+# update pip
+RUN pip3 install --upgrade pip
+
+RUN pip3 install torch torchvision torchaudio
+
+RUN pip3 install --upgrade cython
+RUN pip3 install --upgrade matplotlib
+RUN pip3 install --upgrade opencv-python==4.5.4.60
+
+RUN pip3 install avalanche-lib==0.2.1
+RUN pip3 install matplotlib==3.5.0
+RUN pip3 install numpy==1.23.3
+RUN pip3 install tqdm==4.62.3
+RUN pip3 install typing-extensions
+RUN pip3 install psutil
+RUN pip3 install tensorboard
+RUN pip3 install scikit-learn
+RUN pip3 install pytorchcv
+RUN pip3 install quadprog
+RUN pip3 install gdown
+RUN pip3 install pycocotools
+RUN pip3 install seaborn
+RUN pip3 install torchviz
+RUN pip3 install python-dotenv
+RUN pip3 install firebase-admin
+
+# add source code
+COPY . /app
+
+# Replace /usr/local/lib/python3.10/dist-packages/torchvision/datasets/__init__.py the line from torchvision.datasets import Kinetics400 as torchKinetics400 with nothing to remove it
+RUN sed -i 's/from torchvision.datasets import Kinetics400 as torchKinetics400//g' /usr/local/lib/python3.10/dist-packages/avalanche/benchmarks/datasets/torchvision_wrapper.py
+
+CMD ["python3", "-u", "main.py"]
+

@@ -1,0 +1,9 @@
+version: "3.4"
+
+services:
+  avalanchecovidxraylive:
+    container_name: covidxray-continualai
+    image: avalanchecovidxraylive
+    build:
+      context: .
+      dockerfile: ./Dockerfile-CPU
